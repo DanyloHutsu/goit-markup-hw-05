@@ -591,6 +591,7 @@ overflow: hidden;
 
 .icon-subscribe{
     fill: #fff;
+    margin-left: 16px;
 }
 
 .modal-overlay{
