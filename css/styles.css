@@ -626,7 +626,7 @@ transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-b
     border-radius: 50%;
         background-color: #e7e9fc;
         stroke-width: 1px;
-        border: solid rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(0, 0, 0, 0.1);
         padding: 0;
         position: absolute;
         top: 24px;
@@ -694,7 +694,9 @@ transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-b
         height: 40px;
         padding: 0;
         padding-left: 38px;
-        outline: none;
+        background-color: transparent;
+        outline: transparent;
+        transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .order-form-input:focus {
@@ -710,7 +712,8 @@ transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-b
     position: absolute;
     top: 50%;
     left: 16px;
-    transform: translateY(-60%);
+    transform: translateY(-50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .order-form-input:focus+.form-icons{
@@ -722,11 +725,19 @@ transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-b
         border-radius: 4px;
         width: 360px;
         height: 120px;
-        outline: none;
+        outline: transparent;
         resize: none;
-        padding-top: 8px;
-        padding-left: 16px;
-        margin-bottom: 16px;
+        padding: 8px 16px;
+        font-size: 12px;
+            line-height: 117%;
+            letter-spacing: 0.04em;
+            color: rgba(46, 47, 66, 0.4);
+            background-color: transparent;
+            transition: border-color 25ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.container-comment{
+    margin-bottom: 16px;
 }
 
 .form-comment:focus{
@@ -756,6 +767,8 @@ transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-b
             justify-content: center;
             align-items: center;
             margin-right: 8px;
+            transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+            fill: transparent;
 }
 
 .custom-label-checkbox{
@@ -780,13 +793,15 @@ transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-b
 
 .checkbox:checked + .custom-label-checkbox > .custom-checkbox {
     border-color: transparent;
+    border: none;
     background-color: #404bbf;
+    fill: #F4F4FD;
 }
 
 .modal-btn {
     border-radius: 4px;
         padding: 16px 32px;
-        width: 169px;
+        min-width: 169px;
         height: 56px;
         border: none;
             font-weight: 500;
@@ -799,4 +814,6 @@ transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-b
                 background: #4d5ae5;
                 cursor: pointer;
                 margin-left: 95px;
+                display: block;
+                transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
