@@ -360,7 +360,6 @@ h1,h2,h3,h4,h5,h6,p,ul{
 }
 
 .portfolio{
-    background-color: #F4F4FD;
     padding-top: 120px;
     padding-bottom: 120px;
 }
@@ -482,7 +481,6 @@ overflow: hidden;
 .footer-container{
     display: flex;
     align-items: baseline;
-    gap: 120px;
 }
 
 .li-icons-footer{
@@ -514,6 +512,10 @@ overflow: hidden;
 
 .footer-link-icons:focus{
     background-color: #31d0aa;
+}
+
+.footer-container-icons{
+    margin-right: 80px;
 }
 
 .footer-icons{
